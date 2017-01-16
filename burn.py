@@ -1,8 +1,12 @@
 import time, hashlib
 
-def burn_cpu(duration_in_s):
+def burn_cpu():
+    BURN_TIME = 0.2
 
-    endtime = duration_in_s + time.time()
+    start = time.time()
 
-    while time.time() < endtime:
-        meaningless = hashlib.sha512()
+    while time.time() < start + BURN_TIME:
+        # meaningless = hashlib.sha512()
+        1 + 2
+
+    return time.time() - start
